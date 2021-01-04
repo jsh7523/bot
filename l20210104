@@ -1,0 +1,8 @@
+# 輸出紀錄
+pip install loguru
+
+# HTTP / HTTPS
+pip install requests
+
+# 字元編碼判斷
+pip install chardet
