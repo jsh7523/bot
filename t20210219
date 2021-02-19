@@ -1,0 +1,14 @@
+rssurls = 'https://mops.twse.com.tw/nas/rss/mopsrss201001.xml'
+techart = feedparser.parse(rssurls)
+techdeets = [post.title + " , " + post.link + " , " + post.description  for post in techart.entries]
+techdeets = [y.strip() for y in techdeets]
+print(techdeets)
+import csv
+
+savedfile = open('/test1.txt', 'w')
+savedfile.write(str(techdeets) + "/n")
+savedfile.close()
+
+import pandas as pd
+df = pd.read_csv('/test1.txt', encoding='cp1252')
+df
