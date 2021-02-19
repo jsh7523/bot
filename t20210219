@@ -12,3 +12,8 @@ savedfile.close()
 import pandas as pd
 df = pd.read_csv('/test1.txt', encoding='cp1252')
 df
+import pandas as pd
+df=pd.DataFrame(techdeets)
+df.to_csv('abc',sep='\t')
+from google.colab import files
+files.download("abc.csv")
